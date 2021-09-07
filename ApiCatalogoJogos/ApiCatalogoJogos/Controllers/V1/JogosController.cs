@@ -76,7 +76,7 @@ namespace ApiCatalogoJogos.Controllers.V1
             }
             catch (JogoJaCadastradoException)
             {
-                return UnprocessableEntity("Já existe um jogo com este nome para esta produtora");
+                return UnprocessableEntity("Já existe um jogo com este nome na editora");
             }
         }
 

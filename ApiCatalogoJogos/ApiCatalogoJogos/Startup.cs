@@ -40,7 +40,7 @@ namespace ApiCatalogoJogos
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ExemploApiCatalogoJogos", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCatalogoJogos", Version = "v1" });
 
                 var basePath = AppDomain.CurrentDomain.BaseDirectory;
                 var fileName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml";
@@ -55,7 +55,7 @@ namespace ApiCatalogoJogos
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ExemploApiCatalogoJogos v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiCatalogoJogos v1"));
             }
 
             app.UseMiddleware<ExceptionMiddleware>();
